@@ -46,7 +46,7 @@
                 perspective: 1000px;
             }
             .car-image {
-                transition: transform 0.1s ease-out;
+                transition: transform 0.3s ease-out;
                 transform-style: preserve-3d;
             }
             .tab-active {
@@ -66,6 +66,12 @@
             @keyframes pulse {
                 0%, 100% { opacity: 0.6; }
                 50% { opacity: 1; }
+            }
+            .image-loading {
+                min-height: 300px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
         }
     </style>
@@ -118,9 +124,13 @@
                     </div>
                 </div>
                 <div class="lg:w-1/2">
-                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Li%20Auto%20L9%20luxury%20electric%20SUV%20front%20view%20studio%20lighting%20professional%20car%20photography&image_size=landscape_16_9" 
+                    <img src="https://g.autoimg.cn/@img/car2/cardfs/product/g28/M06/CA/1C/480x360_0_q95_c42_autohomecar__ChxkmmgoEWiAdRpEAA0eF3zj2q8736.jpg" 
                          alt="理想L系列汽车" 
-                         class="rounded-2xl shadow-2xl w-full">
+                         class="rounded-2xl shadow-2xl w-full"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="image-loading bg-gray-200 rounded-2xl hidden">
+                        <p class="text-gray-600">图片加载中...</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -164,20 +174,21 @@
                             <div class="bg-gradient-light rounded-2xl p-8 shadow-inner">
                                 <div class="relative overflow-hidden rounded-xl">
                                     <img id="l6-image" 
-                                         src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Li%20Auto%20L6%20mid-size%20electric%20SUV%20front%20three%20quarter%20view%20blue%20gray%20color%20studio%20background%20professional%20car%20photography%20sleek%20coupe%20design&image_size=landscape_16_9" 
+                                         src="https://g.autoimg.cn/@img/car2/cardfs/product/g28/M00/74/D0/480x360_0_q95_c42_autohomecar__CjIFVGgbYZCAN_XcADIbvn-Y8Lw452.jpg" 
                                          alt="理想L6" 
                                          class="car-image w-full rounded-xl shadow-lg cursor-grab"
-                                         draggable="false">
+                                         draggable="false"
+                                         data-current-index="0">
                                     <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-70 text-white px-4 py-2 rounded-full text-sm rotate-hint">
-                                        <i class="fa fa-arrows-h mr-2"></i>拖动鼠标360°查看
+                                        <i class="fa fa-arrows-h mr-2"></i>拖动鼠标切换角度
                                     </div>
                                 </div>
                                 <div class="mt-6 flex justify-center space-x-4">
                                     <button class="rotate-btn bg-white border-2 border-primary text-primary px-6 py-2 rounded-full font-medium hover:bg-primary hover:text-white transition-colors" data-direction="left">
-                                        <i class="fa fa-arrow-left mr-2"></i>左转
+                                        <i class="fa fa-arrow-left mr-2"></i>上一张
                                     </button>
                                     <button class="rotate-btn bg-white border-2 border-primary text-primary px-6 py-2 rounded-full font-medium hover:bg-primary hover:text-white transition-colors" data-direction="right">
-                                        右转<i class="fa fa-arrow-right ml-2"></i>
+                                        下一张<i class="fa fa-arrow-right ml-2"></i>
                                     </button>
                                 </div>
                             </div>
@@ -187,7 +198,7 @@
                         <div>
                             <div class="mb-8">
                                 <h3 class="text-3xl font-bold mb-2">理想L6</h3>
-                                <p class="text-xl text-gray-600 mb-4">中型五座智能电动SUV</p>
+                                <p class="text-xl text-gray-600 mb-4">中型五座智能电动SUV（溜背运动造型）</p>
                                 <div class="flex items-center mb-6">
                                     <span class="text-4xl font-bold text-primary">¥24.98</span>
                                     <span class="text-xl text-gray-500 ml-1">万起</span>
@@ -293,20 +304,21 @@
                             <div class="bg-gradient-light rounded-2xl p-8 shadow-inner">
                                 <div class="relative overflow-hidden rounded-xl">
                                     <img id="l7-image" 
-                                         src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Li%20Auto%20L7%20premium%20electric%20SUV%20front%20three%20quarter%20view%20white%20color%20studio%20background%20professional%20car%20photography&image_size=landscape_16_9" 
+                                         src="https://g.autoimg.cn/@img/car2/cardfs/product/g28/M06/95/76/480x360_0_q95_c42_autohomecar__CjIFVGgoEWiAQpMQAAy6hRcUpC8896.jpg" 
                                          alt="理想L7" 
                                          class="car-image w-full rounded-xl shadow-lg cursor-grab"
-                                         draggable="false">
+                                         draggable="false"
+                                         data-current-index="0">
                                     <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-70 text-white px-4 py-2 rounded-full text-sm rotate-hint">
-                                        <i class="fa fa-arrows-h mr-2"></i>拖动鼠标360°查看
+                                        <i class="fa fa-arrows-h mr-2"></i>拖动鼠标切换角度
                                     </div>
                                 </div>
                                 <div class="mt-6 flex justify-center space-x-4">
                                     <button class="rotate-btn bg-white border-2 border-primary text-primary px-6 py-2 rounded-full font-medium hover:bg-primary hover:text-white transition-colors" data-direction="left">
-                                        <i class="fa fa-arrow-left mr-2"></i>左转
+                                        <i class="fa fa-arrow-left mr-2"></i>上一张
                                     </button>
                                     <button class="rotate-btn bg-white border-2 border-primary text-primary px-6 py-2 rounded-full font-medium hover:bg-primary hover:text-white transition-colors" data-direction="right">
-                                        右转<i class="fa fa-arrow-right ml-2"></i>
+                                        下一张<i class="fa fa-arrow-right ml-2"></i>
                                     </button>
                                 </div>
                             </div>
@@ -421,20 +433,21 @@
                             <div class="bg-gradient-light rounded-2xl p-8 shadow-inner">
                                 <div class="relative overflow-hidden rounded-xl">
                                     <img id="l8-image" 
-                                         src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Li%20Auto%20L8%20luxury%206-seater%20electric%20SUV%20front%20three%20quarter%20view%20silver%20color%20studio%20background%20professional%20car%20photography&image_size=landscape_16_9" 
+                                         src="https://g.autoimg.cn/@img/car3/cardfs/product/g28/M09/01/4F/480x360_0_q95_c42_autohomecar__Chtlx2goEWiAQiJZAAynONKCZpM839.jpg" 
                                          alt="理想L8" 
                                          class="car-image w-full rounded-xl shadow-lg cursor-grab"
-                                         draggable="false">
+                                         draggable="false"
+                                         data-current-index="0">
                                     <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-70 text-white px-4 py-2 rounded-full text-sm rotate-hint">
-                                        <i class="fa fa-arrows-h mr-2"></i>拖动鼠标360°查看
+                                        <i class="fa fa-arrows-h mr-2"></i>拖动鼠标切换角度
                                     </div>
                                 </div>
                                 <div class="mt-6 flex justify-center space-x-4">
                                     <button class="rotate-btn bg-white border-2 border-primary text-primary px-6 py-2 rounded-full font-medium hover:bg-primary hover:text-white transition-colors" data-direction="left">
-                                        <i class="fa fa-arrow-left mr-2"></i>左转
+                                        <i class="fa fa-arrow-left mr-2"></i>上一张
                                     </button>
                                     <button class="rotate-btn bg-white border-2 border-primary text-primary px-6 py-2 rounded-full font-medium hover:bg-primary hover:text-white transition-colors" data-direction="right">
-                                        右转<i class="fa fa-arrow-right ml-2"></i>
+                                        下一张<i class="fa fa-arrow-right ml-2"></i>
                                     </button>
                                 </div>
                             </div>
@@ -545,20 +558,21 @@
                             <div class="bg-gradient-light rounded-2xl p-8 shadow-inner">
                                 <div class="relative overflow-hidden rounded-xl">
                                     <img id="l9-image" 
-                                         src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Li%20Auto%20L9%20flagship%20full-size%20luxury%20SUV%20front%20three%20quarter%20view%20black%20color%20studio%20background%20professional%20car%20photography&image_size=landscape_16_9" 
+                                         src="https://g.autoimg.cn/@img/car2/cardfs/product/g28/M06/CA/1C/480x360_0_q95_c42_autohomecar__ChxkmmgoEWiAdRpEAA0eF3zj2q8736.jpg" 
                                          alt="理想L9" 
                                          class="car-image w-full rounded-xl shadow-lg cursor-grab"
-                                         draggable="false">
+                                         draggable="false"
+                                         data-current-index="0">
                                     <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-70 text-white px-4 py-2 rounded-full text-sm rotate-hint">
-                                        <i class="fa fa-arrows-h mr-2"></i>拖动鼠标360°查看
+                                        <i class="fa fa-arrows-h mr-2"></i>拖动鼠标切换角度
                                     </div>
                                 </div>
                                 <div class="mt-6 flex justify-center space-x-4">
                                     <button class="rotate-btn bg-white border-2 border-primary text-primary px-6 py-2 rounded-full font-medium hover:bg-primary hover:text-white transition-colors" data-direction="left">
-                                        <i class="fa fa-arrow-left mr-2"></i>左转
+                                        <i class="fa fa-arrow-left mr-2"></i>上一张
                                     </button>
                                     <button class="rotate-btn bg-white border-2 border-primary text-primary px-6 py-2 rounded-full font-medium hover:bg-primary hover:text-white transition-colors" data-direction="right">
-                                        右转<i class="fa fa-arrow-right ml-2"></i>
+                                        下一张<i class="fa fa-arrow-right ml-2"></i>
                                     </button>
                                 </div>
                             </div>
@@ -770,18 +784,11 @@
                             <td class="px-6 py-4 text-center">Pro: 高速NOA<br>Ultra: 全场景NOA</td>
                         </tr>
                         <tr class="hover:bg-gray-50">
-                            <td class="px-6 py-4 font-medium">中控屏幕</td>
-                            <td class="px-6 py-4 text-center">双联屏布局</td>
-                            <td class="px-6 py-4 text-center">15.7英寸OLED双屏</td>
-                            <td class="px-6 py-4 text-center">15.7英寸OLED双屏</td>
-                            <td class="px-6 py-4 text-center">15.7英寸OLED三屏</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50 bg-gray-50">
-                            <td class="px-6 py-4 font-medium">特色配置</td>
-                            <td class="px-6 py-4 text-center">溜背设计+CDC悬挂</td>
-                            <td class="px-6 py-4 text-center">大五座空间</td>
-                            <td class="px-6 py-4 text-center">六座豪华布局</td>
-                            <td class="px-6 py-4 text-center">后排屏+车载冰箱</td>
+                            <td class="px-6 py-4 font-medium">激光雷达</td>
+                            <td class="px-6 py-4 text-center">全系标配</td>
+                            <td class="px-6 py-4 text-center">全系标配</td>
+                            <td class="px-6 py-4 text-center">全系标配</td>
+                            <td class="px-6 py-4 text-center">全系标配</td>
                         </tr>
                     </tbody>
                 </table>
@@ -794,85 +801,154 @@
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold mb-4">
-                    <span class="text-primary">核心</span>优势
+                    <span class="text-primary">理想</span>核心优势
                 </h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    理想L系列凭借增程技术、智能驾驶、舒适体验三大核心优势，成为家庭出行的理想选择。
+                    理想汽车用创新技术为家庭打造更智能、更舒适、更安全的移动空间。
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- 增程技术 -->
-                <div class="bg-gradient-light rounded-2xl p-8 hover-lift">
-                    <div class="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fa fa-bolt text-white text-3xl"></i>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-2xl hover-lift">
+                    <div class="w-16 h-16 bg-primary rounded-xl flex items-center justify-center mb-6">
+                        <i class="fa fa-bolt text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">增程技术</h3>
-                    <p class="text-gray-600 mb-6">
-                        搭载1.5T四缸增程器，配合大容量电池组，实现CLTC综合续航超1300km。纯电通勤，长途无忧，彻底解决里程焦虑。
+                    <h3 class="text-2xl font-bold mb-4">增程电动技术</h3>
+                    <p class="text-gray-600 mb-4">
+                        理想增程电动系统，纯电驱动，增程发电。日常通勤纯电出行，长途旅行没有续航焦虑。CLTC综合续航最高可达1415km。
                     </p>
-                    <ul class="space-y-3 text-gray-600">
+                    <ul class="space-y-2 text-gray-600">
                         <li class="flex items-start">
-                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
-                            <span>CLTC综合续航超1300km</span>
+                            <i class="fa fa-check-circle text-accent mt-1 mr-2"></i>
+                            <span>1.5T四缸增程器</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
-                            <span>75kW快充，30分钟补能80%</span>
+                            <i class="fa fa-check-circle text-accent mt-1 mr-2"></i>
+                            <span>前后双电机智能四驱</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
-                            <span>纯电模式日常通勤零排放</span>
+                            <i class="fa fa-check-circle text-accent mt-1 mr-2"></i>
+                            <span>支持快充和慢充</span>
                         </li>
                     </ul>
                 </div>
 
-                <!-- 智能驾驶 -->
-                <div class="bg-gradient-light rounded-2xl p-8 hover-lift">
-                    <div class="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fa fa-car text-white text-3xl"></i>
+                <div class="bg-gray-50 p-8 rounded-2xl hover-lift">
+                    <div class="w-16 h-16 bg-primary rounded-xl flex items-center justify-center mb-6">
+                        <i class="fa fa-road text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">智能驾驶</h3>
-                    <p class="text-gray-600 mb-6">
-                        搭载领先的智能驾驶系统，Pro版支持高速导航辅助驾驶，Max/Ultra版配备英伟达Thor-U芯片，实现全场景NOA智能驾驶。
+                    <h3 class="text-2xl font-bold mb-4">智能驾驶辅助</h3>
+                    <p class="text-gray-600 mb-4">
+                        搭载理想AD智能驾驶系统，Max版本配备英伟达Thor-U芯片（700TOPS算力）和激光雷达，支持城市+高速全场景导航辅助驾驶。
                     </p>
-                    <ul class="space-y-3 text-gray-600">
+                    <ul class="space-y-2 text-gray-600">
                         <li class="flex items-start">
-                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
-                            <span>Ultra版700TOPS超强算力</span>
+                            <i class="fa fa-check-circle text-accent mt-1 mr-2"></i>
+                            <span>ATL全天候激光雷达</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
-                            <span>激光雷达+高清摄像头感知</span>
+                            <i class="fa fa-check-circle text-accent mt-1 mr-2"></i>
+                            <span>800万像素高清摄像头</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
-                            <span>城市+高速全场景NOA</span>
+                            <i class="fa fa-check-circle text-accent mt-1 mr-2"></i>
+                            <span>128TOPS/700TOPS算力可选</span>
                         </li>
                     </ul>
                 </div>
 
-                <!-- 舒适体验 -->
-                <div class="bg-gradient-light rounded-2xl p-8 hover-lift">
-                    <div class="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mb-6">
-                        <i class="fa fa-home text-white text-3xl"></i>
+                <div class="bg-gray-50 p-8 rounded-2xl hover-lift">
+                    <div class="w-16 h-16 bg-primary rounded-xl flex items-center justify-center mb-6">
+                        <i class="fa fa-home text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">舒适体验</h3>
-                    <p class="text-gray-600 mb-6">
-                        打造"移动的家"，双腔空气悬挂提供极致舒适，高通骁龙8295芯片保证座舱流畅体验，后排配置堪比豪华MPV。
+                    <h3 class="text-2xl font-bold mb-4">家庭舒适座舱</h3>
+                    <p class="text-gray-600 mb-4">
+                        为家庭打造的舒适空间，五/六座灵活布局，二排独立座椅带加热/通风/按摩，三屏联动智能交互系统。
                     </p>
-                    <ul class="space-y-3 text-gray-600">
+                    <ul class="space-y-2 text-gray-600">
                         <li class="flex items-start">
-                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
-                            <span>双腔空气悬挂软硬可调</span>
+                            <i class="fa fa-check-circle text-accent mt-1 mr-2"></i>
+                            <span>高通骁龙8295芯片</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
-                            <span>第二排座椅加热通风按摩</span>
+                            <i class="fa fa-check-circle text-accent mt-1 mr-2"></i>
+                            <span>三屏OLED交互系统</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
-                            <span>车载冰箱+后排娱乐屏</span>
+                            <i class="fa fa-check-circle text-accent mt-1 mr-2"></i>
+                            <span>后排娱乐系统可选</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-2xl hover-lift">
+                    <div class="w-16 h-16 bg-primary rounded-xl flex items-center justify-center mb-6">
+                        <i class="fa fa-car text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">魔毯空气悬挂</h3>
+                    <p class="text-gray-600 mb-4">
+                        双腔空气悬挂+CDC电磁减震系统，根据路况实时调节悬挂软硬和车身高度，带来如履平地的魔毯般乘坐体验。
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-accent mt-1 mr-2"></i>
+                            <span>前双叉臂独立悬架</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-accent mt-1 mr-2"></i>
+                            <span>后五连杆独立悬架</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-accent mt-1 mr-2"></i>
+                            <span>空气悬挂高度可调</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-2xl hover-lift">
+                    <div class="w-16 h-16 bg-primary rounded-xl flex items-center justify-center mb-6">
+                        <i class="fa fa-shield text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">五星安全标准</h3>
+                    <p class="text-gray-600 mb-4">
+                        高强度钢铝混合车身，电池车身一体化设计，标配全车气囊和主动安全系统，为全家人出行保驾护航。
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-accent mt-1 mr-2"></i>
+                            <span>C-NCAP五星安全</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-accent mt-1 mr-2"></i>
+                            <span>高强度钢铝车身</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-accent mt-1 mr-2"></i>
+                            <span>全系标配AEB自动刹车</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-2xl hover-lift">
+                    <div class="w-16 h-16 bg-primary rounded-xl flex items-center justify-center mb-6">
+                        <i class="fa fa-wrench text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">无忧售后服务</h3>
+                    <p class="text-gray-600 mb-4">
+                        全国超过300家零售中心和售后服务中心，提供5年或10万公里整车质保，三电系统终身质保。
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-accent mt-1 mr-2"></i>
+                            <span>5年/10万公里整车质保</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-accent mt-1 mr-2"></i>
+                            <span>三电系统终身质保</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-accent mt-1 mr-2"></i>
+                            <span>全国300+服务网点</span>
                         </li>
                     </ul>
                 </div>
@@ -881,192 +957,220 @@
     </section>
 
     <!-- 购买指南 -->
-    <section class="py-20 bg-gradient-primary text-white">
+    <section class="py-20 bg-gray-50">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold mb-4">
-                    如何选择适合你的理想L系列
+                    <span class="text-primary">哪款</span>适合您？
                 </h2>
-                <p class="text-xl text-blue-100 max-w-3xl mx-auto">
-                    根据你的家庭需求和预算，选择最适合的理想L系列车型。
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    根据您的家庭需求和预算，选择最适合您的理想L系列车型。
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- L7推荐 -->
-                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 hover-lift">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-8 rounded-2xl hover-lift shadow-lg border-l-4 border-primary">
                     <div class="text-center mb-6">
-                        <h3 class="text-2xl font-bold mb-2">选择理想L7</h3>
-                        <p class="text-blue-200">五座旗舰，年轻家庭首选</p>
+                        <span class="text-3xl font-bold text-primary">理想L6</span>
                     </div>
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-start">
-                            <i class="fa fa-check text-green-400 mt-1 mr-3"></i>
-                            <span>如果你主要是2-3人小家庭出行</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa fa-check text-green-400 mt-1 mr-3"></i>
-                            <span>如果你追求更大的后备箱空间</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa fa-check text-green-400 mt-1 mr-3"></i>
-                            <span>如果你的预算在30-36万之间</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa fa-check text-green-400 mt-1 mr-3"></i>
-                            <span>如果你看重性价比和实用性</span>
-                        </li>
-                    </ul>
-                    <a href="#models" class="block w-full text-center bg-white text-primary py-3 rounded-full font-semibold hover:bg-opacity-90 transition-colors">
-                        了解L7详情
-                    </a>
+                    <div class="mb-4">
+                        <span class="text-2xl font-bold">¥24.98万起</span>
+                    </div>
+                    <div class="mb-4">
+                        <h4 class="font-semibold mb-2">适合人群</h4>
+                        <ul class="space-y-1 text-gray-600 text-sm">
+                            <li>• 预算25-28万</li>
+                            <li>• 喜欢溜背运动造型</li>
+                            <li>• 追求性价比和科技感</li>
+                            <li>• 日常通勤为主，偶尔长途</li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100">
+                        <p class="text-sm text-gray-500">
+                            <i class="fa fa-star text-yellow-500 mr-1"></i>
+                            推荐理由：溜背运动造型，性价比最高，标配激光雷达和CDC悬挂
+                        </p>
+                    </div>
                 </div>
 
-                <!-- L8推荐 -->
-                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 hover-lift">
+                <div class="bg-white p-8 rounded-2xl hover-lift shadow-lg border-l-4 border-primary">
                     <div class="text-center mb-6">
-                        <h3 class="text-2xl font-bold mb-2">选择理想L8</h3>
-                        <p class="text-blue-200">六座豪华，多孩家庭首选</p>
+                        <span class="text-3xl font-bold text-primary">理想L7</span>
                     </div>
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-start">
-                            <i class="fa fa-check text-green-400 mt-1 mr-3"></i>
-                            <span>如果你是二胎或三胎家庭</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa fa-check text-green-400 mt-1 mr-3"></i>
-                            <span>如果你经常需要带老人出行</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa fa-check text-green-400 mt-1 mr-3"></i>
-                            <span>如果你的预算在32-38万之间</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa fa-check text-green-400 mt-1 mr-3"></i>
-                            <span>如果你追求六座独立座椅体验</span>
-                        </li>
-                    </ul>
-                    <a href="#models" class="block w-full text-center bg-white text-primary py-3 rounded-full font-semibold hover:bg-opacity-90 transition-colors">
-                        了解L8详情
-                    </a>
+                    <div class="mb-4">
+                        <span class="text-2xl font-bold">¥30.18万起</span>
+                    </div>
+                    <div class="mb-4">
+                        <h4 class="font-semibold mb-2">适合人群</h4>
+                        <ul class="space-y-1 text-gray-600 text-sm">
+                            <li>• 预算30-36万</li>
+                            <li>• 五座需求，大后备箱</li>
+                            <li>• 注重乘坐舒适性</li>
+                            <li>• 年轻家庭或单身贵族</li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100">
+                        <p class="text-sm text-gray-500">
+                            <i class="fa fa-star text-yellow-500 mr-1"></i>
+                            推荐理由：五座旗舰，超大后排空间，二排女王座椅
+                        </p>
+                    </div>
                 </div>
 
-                <!-- L9推荐 -->
-                <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 hover-lift">
+                <div class="bg-white p-8 rounded-2xl hover-lift shadow-lg border-l-4 border-primary">
                     <div class="text-center mb-6">
-                        <h3 class="text-2xl font-bold mb-2">选择理想L9</h3>
-                        <p class="text-blue-200">旗舰之选，追求极致体验</p>
+                        <span class="text-3xl font-bold text-primary">理想L8</span>
                     </div>
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-start">
-                            <i class="fa fa-check text-green-400 mt-1 mr-3"></i>
-                            <span>如果你追求旗舰级豪华体验</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa fa-check text-green-400 mt-1 mr-3"></i>
-                            <span>如果你需要后排娱乐和车载冰箱</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa fa-check text-green-400 mt-1 mr-3"></i>
-                            <span>如果你的预算在40-44万之间</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa fa-check text-green-400 mt-1 mr-3"></i>
-                            <span>如果你看重全尺寸空间和配置</span>
-                        </li>
-                    </ul>
-                    <a href="#models" class="block w-full text-center bg-white text-primary py-3 rounded-full font-semibold hover:bg-opacity-90 transition-colors">
-                        了解L9详情
-                    </a>
+                    <div class="mb-4">
+                        <span class="text-2xl font-bold">¥32.18万起</span>
+                    </div>
+                    <div class="mb-4">
+                        <h4 class="font-semibold mb-2">适合人群</h4>
+                        <ul class="space-y-1 text-gray-600 text-sm">
+                            <li>• 预算32-38万</li>
+                            <li>• 二胎或多孩家庭</li>
+                            <li>• 需要六座灵活布局</li>
+                            <li>• 经常全家一起出行</li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100">
+                        <p class="text-sm text-gray-500">
+                            <i class="fa fa-star text-yellow-500 mr-1"></i>
+                            推荐理由：六座布局，三排都舒适，空气悬挂性价比之选
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl hover-lift shadow-lg border-l-4 border-primary">
+                    <div class="text-center mb-6">
+                        <span class="text-3xl font-bold text-primary">理想L9</span>
+                    </div>
+                    <div class="mb-4">
+                        <span class="text-2xl font-bold">¥40.98万起</span>
+                    </div>
+                    <div class="mb-4">
+                        <h4 class="font-semibold mb-2">适合人群</h4>
+                        <ul class="space-y-1 text-gray-600 text-sm">
+                            <li>• 预算40-44万</li>
+                            <li>• 追求极致豪华体验</li>
+                            <li>• 商务接待需求</li>
+                            <li>• 旗舰级全尺寸SUV</li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100">
+                        <p class="text-sm text-gray-500">
+                            <i class="fa fa-star text-yellow-500 mr-1"></i>
+                            推荐理由：旗舰级六座，后排娱乐+冰箱，21扬声器音响
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 联系我们 -->
-    <section id="contact" class="py-20 bg-white">
+    <section id="contact" class="py-20 bg-gradient-primary text-white">
         <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">
+                    预约<span class="text-blue-200">试驾</span>
+                </h2>
+                <p class="text-xl text-blue-100 max-w-3xl mx-auto">
+                    填写以下信息，我们的销售顾问将在24小时内与您联系，安排专属试驾体验。
+                </p>
+            </div>
+
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <div>
-                    <h2 class="text-4xl font-bold mb-4">
-                        联系<span class="text-primary">我们</span>
-                    </h2>
-                    <p class="text-xl text-gray-600 mb-8">
-                        欢迎到店试驾体验理想L系列，我们的专业顾问将为您提供一对一的购车咨询服务。
-                    </p>
-                    
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
-                                <i class="fa fa-map-marker text-white text-xl"></i>
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm p-8 rounded-2xl">
+                    <form id="testDriveForm">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-blue-100 mb-2 font-medium">您的姓名</label>
+                                <input type="text" name="name" required 
+                                       class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-blue-200 focus:outline-none focus:border-white focus:bg-opacity-30"
+                                       placeholder="请输入姓名">
                             </div>
                             <div>
-                                <h4 class="font-semibold text-lg mb-1">门店地址</h4>
-                                <p class="text-gray-600">全国各城市理想汽车零售中心</p>
-                                <p class="text-gray-500 text-sm mt-1">点击官网查询您附近的门店</p>
+                                <label class="block text-blue-100 mb-2 font-medium">联系电话</label>
+                                <input type="tel" name="phone" required 
+                                       class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-blue-200 focus:outline-none focus:border-white focus:bg-opacity-30"
+                                       placeholder="请输入手机号">
                             </div>
                         </div>
                         
-                        <div class="flex items-start">
-                            <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
-                                <i class="fa fa-phone text-white text-xl"></i>
-                            </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                             <div>
-                                <h4 class="font-semibold text-lg mb-1">咨询热线</h4>
-                                <p class="text-gray-600">400-805-2900</p>
-                                <p class="text-gray-500 text-sm mt-1">工作日 9:00-21:00</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
-                                <i class="fa fa-gift text-white text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-lg mb-1">购车权益</h4>
-                                <ul class="text-gray-600 space-y-1">
-                                    <li>• 3年0息金融方案</li>
-                                    <li>• 定金抵扣优惠</li>
-                                    <li>• 免费家用充电桩安装</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div>
-                    <div class="bg-gray-50 rounded-2xl p-8">
-                        <h3 class="text-2xl font-bold mb-6">预约试驾</h3>
-                        <form id="testDriveForm" class="space-y-6">
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">您的姓名</label>
-                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-colors" placeholder="请输入您的姓名" required>
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">联系电话</label>
-                                <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-colors" placeholder="请输入您的手机号" required>
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">意向车型</label>
-                                <select class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-colors">
-                                    <option value="">请选择车型</option>
-                                    <option value="l7">理想L7</option>
-                                    <option value="l8">理想L8</option>
-                                    <option value="l9">理想L9</option>
+                                <label class="block text-blue-100 mb-2 font-medium">意向车型</label>
+                                <select name="carModel" required 
+                                        class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white focus:outline-none focus:border-white focus:bg-opacity-30">
+                                    <option value="" class="text-dark">请选择车型</option>
+                                    <option value="l6" class="text-dark">理想L6</option>
+                                    <option value="l7" class="text-dark">理想L7</option>
+                                    <option value="l8" class="text-dark">理想L8</option>
+                                    <option value="l9" class="text-dark">理想L9</option>
                                 </select>
                             </div>
                             <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">预约时间</label>
-                                <input type="date" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-colors">
+                                <label class="block text-blue-100 mb-2 font-medium">所在城市</label>
+                                <input type="text" name="city" 
+                                       class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-blue-200 focus:outline-none focus:border-white focus:bg-opacity-30"
+                                       placeholder="请输入城市">
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-blue-100 mb-2 font-medium">备注信息（选填）</label>
+                            <textarea name="message" rows="3"
+                                      class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-blue-200 focus:outline-none focus:border-white focus:bg-opacity-30"
+                                      placeholder="请输入您的其他需求或问题..."></textarea>
+                        </div>
+                        
+                        <button type="submit" 
+                                class="w-full bg-white text-primary py-4 rounded-lg font-semibold text-lg hover:bg-opacity-90 transition-all shadow-lg">
+                            <i class="fa fa-calendar-check-o mr-2"></i>
+                            提交预约
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="space-y-8">
+                    <div class="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-2xl">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-white bg-opacity-20 rounded-xl flex items-center justify-center mr-4">
+                                <i class="fa fa-map-marker text-white text-xl"></i>
                             </div>
                             <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">留言备注</label>
-                                <textarea class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-colors" rows="3" placeholder="请输入您的需求或疑问"></textarea>
+                                <h4 class="font-semibold text-lg mb-2">门店地址</h4>
+                                <p class="text-blue-100">全国超过300家零售中心</p>
+                                <p class="text-blue-100 text-sm mt-1">请拨打400电话查询您附近的门店</p>
                             </div>
-                            <button type="submit" class="w-full bg-primary text-white py-4 rounded-xl font-semibold hover:bg-opacity-90 transition-colors shadow-lg">
-                                提交预约
-                            </button>
-                        </form>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-2xl">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-white bg-opacity-20 rounded-xl flex items-center justify-center mr-4">
+                                <i class="fa fa-phone text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">服务热线</h4>
+                                <p class="text-blue-100 text-2xl font-bold">400-686-0900</p>
+                                <p class="text-blue-100 text-sm mt-1">7x24小时全天候服务</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-2xl">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-white bg-opacity-20 rounded-xl flex items-center justify-center mr-4">
+                                <i class="fa fa-clock-o text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2">营业时间</h4>
+                                <p class="text-blue-100">零售中心：9:00 - 21:00</p>
+                                <p class="text-blue-100 text-sm mt-1">售后服务中心：8:30 - 18:00</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1076,7 +1180,7 @@
     <!-- 页脚 -->
     <footer class="bg-dark text-white py-16">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                 <div>
                     <div class="flex items-center mb-6">
                         <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center mr-3">
@@ -1084,66 +1188,71 @@
                         </div>
                         <div>
                             <h3 class="text-xl font-bold">理想汽车</h3>
-                            <p class="text-xs text-gray-400">L系列智能电动SUV</p>
+                            <p class="text-gray-400 text-sm">创造移动的家，创造幸福的家</p>
                         </div>
                     </div>
-                    <p class="text-gray-400">
-                        为家庭打造的智能移动空间，让每一次出行都成为美好回忆。
+                    <p class="text-gray-400 text-sm">
+                        理想汽车是中国新能源汽车制造商，设计、研发、制造和销售豪华智能电动汽车。
                     </p>
                 </div>
                 
                 <div>
-                    <h4 class="font-semibold mb-4 text-lg">产品中心</h4>
-                    <ul class="space-y-3 text-gray-400">
-                        <li><a href="#models" class="hover:text-primary transition-colors">理想L7</a></li>
-                        <li><a href="#models" class="hover:text-primary transition-colors">理想L8</a></li>
-                        <li><a href="#models" class="hover:text-primary transition-colors">理想L9</a></li>
-                        <li><a href="#compare" class="hover:text-primary transition-colors">参数对比</a></li>
+                    <h4 class="font-semibold text-lg mb-4">产品中心</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">理想L6</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">理想L7</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">理想L8</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">理想L9</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">理想MEGA</a></li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h4 class="font-semibold mb-4 text-lg">服务支持</h4>
-                    <ul class="space-y-3 text-gray-400">
-                        <li><a href="#" class="hover:text-primary transition-colors">预约试驾</a></li>
-                        <li><a href="#" class="hover:text-primary transition-colors">门店查询</a></li>
-                        <li><a href="#" class="hover:text-primary transition-colors">金融方案</a></li>
-                        <li><a href="#" class="hover:text-primary transition-colors">售后服务</a></li>
+                    <h4 class="font-semibold text-lg mb-4">购车服务</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">预约试驾</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">金融方案</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">置换服务</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">企业购车</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">充电服务</a></li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h4 class="font-semibold mb-4 text-lg">关注我们</h4>
+                    <h4 class="font-semibold text-lg mb-4">关注我们</h4>
                     <div class="flex space-x-4 mb-6">
-                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-                            <i class="fa fa-weixin text-white"></i>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fa fa-weixin"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-                            <i class="fa fa-weibo text-white"></i>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fa fa-weibo"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-                            <i class="fa fa-youtube-play text-white"></i>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fa fa-youtube-play"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-                            <i class="fa fa-instagram text-white"></i>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="fa fa-apple"></i>
                         </a>
                     </div>
-                    <p class="text-gray-400 text-sm">
-                        客服热线：400-805-2900<br>
-                        工作时间：9:00-21:00
-                    </p>
+                    <div>
+                        <p class="text-gray-400 text-sm mb-2">扫码下载理想汽车APP</p>
+                        <div class="w-24 h-24 bg-white rounded-lg flex items-center justify-center">
+                            <i class="fa fa-qrcode text-gray-600 text-4xl"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
             
-            <div class="border-t border-gray-700 pt-8">
+            <div class="border-t border-gray-800 pt-8">
                 <div class="flex flex-col md:flex-row justify-between items-center">
-                    <p class="text-gray-400 text-sm mb-4 md:mb-0">
-                        © 2026 理想汽车 L系列展示网站 | 本网站仅供展示用途
-                    </p>
-                    <div class="flex space-x-6 text-sm text-gray-400">
-                        <a href="#" class="hover:text-primary transition-colors">隐私政策</a>
-                        <a href="#" class="hover:text-primary transition-colors">使用条款</a>
-                        <a href="#" class="hover:text-primary transition-colors">网站地图</a>
+                    <div class="text-gray-400 text-sm mb-4 md:mb-0">
+                        &copy; 2025 理想汽车. 保留所有权利.
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-primary text-sm transition-colors">隐私政策</a>
+                        <a href="#" class="text-gray-400 hover:text-primary text-sm transition-colors">服务条款</a>
+                        <a href="#" class="text-gray-400 hover:text-primary text-sm transition-colors">法律声明</a>
+                        <a href="#" class="text-gray-400 hover:text-primary text-sm transition-colors">网站地图</a>
                     </div>
                 </div>
             </div>
